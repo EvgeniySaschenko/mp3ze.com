@@ -1,0 +1,65 @@
+.nav
+	&:first-child
+		border-top: 0
+	&_sidebar-left
+		font-size: 16px
+	&__item
+		display: flex
+		align-items: center
+		min-height: 42px
+		width: 100%
+		border-radius: 5px
+		border-top: 1px solid $color-5
+		cursor: pointer
+		padding: 8px
+		box-sizing: border-box
+		&:hover
+			background: linear-gradient(to bottom,#fff 1%,#ededed 100%)
+			box-shadow: 0 2px 3px grey
+			transition: .1s
+	&__link
+		flex-grow: 1
+		padding-left: 8px
+	&__icon
+		flex-shrink: 0
+		background-image: url(/../img/spritesheet.png)
+		background-repeat: no-repeat
+		display: inline-block
+		width: 31px
+		height: 31px
+		&_home
+			background-position: -181px -57px
+		&_plus
+			background-position: -76px -3px
+		&_speaker
+			background-position: -3px -57px
+		&_music-collection
+			background-position: -185px -3px
+		&_music
+			background-position: -145px -57px
+		&_mic
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAflBMVEVHcExeg7leg7leg7leg7leg7leg7leg7leg7leg7leg7leg7leg7leg7leg7n////6+/2cs9R4l8WZsdOKpc1eg7lpjL6juNfe5vHAzuS8y+Lw8/hvkcFkiLyswNtsjr/3+fvi6fP+/v7S3Ozw9Pl/nci7yuGAncjs8PfO2uqWlNzNAAAAD3RSTlMABUyA+VcQ6pQDxa2Bx02cpN6IAAABG0lEQVR4XoWTWXLDIAxAsXEMIUnZ8b5mv/8FGy8otM3U7wv0ZhAICQFRTBlJEsJoHKHfpJhYgOD0p90tEiC7QO6p/QPdgz3YDxy8p/YjdM0LgbqsqrKG7Zw/hVu5nL/IHdxvuj+2HslnJAQwQhGBXbnoEgIkQrEFikUXFogR/U9TxNZV071116xBhnxqfW5ui741Z+2To2RdtVXtdV21azABLXvVznZsVS+9hsOv3CgxaaEMv8LhDEqWW91z3mubQ+HY+2GGF67TunMFN/CwoCxSDJkx2SAkhL7Cot6f4sXzHhYVYRswDOEOhx/qZJY9HlkmHXxo2A7qwkchRn5R0A4bzbTRihuNvDEGQHokgTymIIIRPE0jeApH8BvDKzh+n2XaQAAAAABJRU5ErkJggg==)
+		&_star
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAbFBMVEVHcExeg7leg7leg7leg7leg7leg7leg7leg7leg7leg7leg7leg7n///9eg7ny9fl8msZihrvt8feEocrj6vPE0uV2lcNzk8KNp837/P3c5PCjuNe5yOBtjr9rjb+Sq8/U3uyovNlnir2nu9hi2BP7AAAADXRSTlMAiKrZ+5Bg8Vi4yKvaMeIzmQAAARlJREFUKM+FU1eywyAMxCUGJ6FjXNPvf8cHPIpSZrwf9qBFqK0QSiBV3+C2xU1fEfSJrsYsA9fdO3sAZLhwACTp2Rf6HIEc2Q8cEw98rQX+MW6xyG2T5RTidyArqxRwxz7/GsR7UfoCx9rlBZyfnFL+BO4EVeD2Sh1WYKhA2hfNPc31BSTf+J94DGamGbMZHsLbGxRCC0U/oAKNURteGc07a8ZgbiPNxALZRbBIp7oE8DciVfafmofO8ZVOtqYUZgttS2G5LRNPNJ9KW3JT11z4vJam5pFsnhkG/93KSPJAHXHXUuq7uwQGGuVwXdQUpCAntVyLHKKYxlvWibyNQEx7UtwR8t4a+PxPcIlO3deWuRU8+xU8wxX8Az1ZKKkQdIivAAAAAElFTkSuQmCC)
+
+	
+.nav
+	&_footer
+		display: flex
+		justify-content: space-around
+		.nav
+			&__link
+				color: $color-7
+			&__item
+				background: none
+				border: 0
+				width: auto
+				&:hover
+					box-shadow: none
+					background: none
+
+@media #{$phone}
+	.nav
+		&_footer
+			flex-direction: column
+			align-items: center

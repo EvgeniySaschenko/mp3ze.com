@@ -1,0 +1,55 @@
+.track-info
+	text-align: center
+	&__row
+		display: flex
+		flex-direction: column
+		&_3
+			flex-direction: row
+			justify-content: space-between
+			margin-bottom: 20px
+			.track-info__col
+				width: 48%
+	&__icon
+		flex-shrink: 0
+		background-image: url(/../img/spritesheet.png)
+		background-repeat: no-repeat
+		display: inline-block
+		width: 22px
+		height: 22px
+		margin-right: 5px
+		&_clock
+			background-position: -39px -57px
+	&__duration
+		display: flex
+		align-items: center
+		justify-content: center
+	&__box-img
+		text-align: center
+	&__text
+		line-height: 1.5
+		font-size: 12px
+		margin-bottom: 15px
+		strong
+			font-weight: 700
+	&__title
+		margin-bottom: 20px
+		&_artist,
+		&_name
+			display: inline-block
+			width: 100%
+			margin-bottom: 10px
+			word-wrap: break-word
+		&_artist
+			font-size: 36px
+			word-wrap: break-word
+		&_name
+			font-size: 20px
+
+@media #{$phone}
+	.track-info
+		&__row
+			flex-direction: column
+			&_3
+				.track-info__col
+					margin-bottom: 10px
+					width: 100%

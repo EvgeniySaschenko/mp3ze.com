@@ -1,0 +1,76 @@
+.list-track
+	margin-bottom: 20px
+	&__item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 8px
+		border-bottom: 1px dashed $color-5
+		&:hover
+			background: linear-gradient(to bottom,#fff 1%,#ededed 100%)
+			border-radius: 6px
+			box-shadow: 0 2px 3px grey
+			transition: .1s
+	&__box
+		display: flex
+		align-items: center
+		&_1
+			flex-shrink: 1
+			min-width: 150px
+		&_2
+			flex-shrink: 0
+	&__info
+		display: flex
+		flex-direction: column
+		min-width: 90px
+		flex-shrink: 1
+		word-wrap: break-word
+	&__artist
+		color: $color-6
+		font-size: 14px
+		margin-bottom: 5px
+	&__name
+		font-weight: 700
+	&__box-img
+		width: 32px
+		height: 32px
+		margin-right: 5px
+		display: inline-block
+		overflow: hidden
+	&__img
+		width: 100%
+		height: 100%
+		display: inline-block
+		background: #000
+	&__download
+		background-image: url(/../img/spritesheet.png)
+		display: inline-block
+		background-repeat: no-repeat
+		font-size: 0
+	&__toggle
+		font-size: 0
+		&::before
+			background-image: url(/../img/spritesheet.png)
+			display: inline-block
+			background-repeat: no-repeat
+			content: ""
+			display: inline-block
+			min-width: 50px
+			width: 50px
+			height: 50px
+			margin-right: 8px
+		&::before
+			background-position: -196px -174px
+	.plays
+		.list-track__toggle::before
+			background-position: -84px -174px
+	&__download
+		background-position: -67px -57px
+		width: 33px
+		height: 33px
+		margin-right: 2px
+
+@media #{$phone}
+	.list-track
+		&__name
+			font-size: 14px

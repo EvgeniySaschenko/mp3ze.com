@@ -1,0 +1,32 @@
+include ../../node_modules/bemto.pug/bemto.pug
+include ../block/index
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="shortcut icon" href="imag/favicon.ico" type="image/x-icon")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		block meta_k
+		block meta_d
+		block title
+	body
+		.wrapper
+			+b-header()
+
+			block main	
+				+b.MAIN.main
+				
+			+b-footer()
+
+			//link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+			//link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css")
+			link(rel="stylesheet", href="css/style.css")
+			//script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+			//script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js")
+			//script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js")
+			//script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
+			//script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js")
+			//script(src="https://use.fontawesome.com/be2e8d8d61.js")
+			script(src="js/app.js")

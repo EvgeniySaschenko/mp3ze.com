@@ -1,0 +1,61 @@
+.sidebar
+	&__item
+		margin-bottom: 10px
+	&__title
+		display: flex
+		align-items: center
+		width: 100%
+		border-radius: 5px
+		font-size: 16px
+		color: #fff
+		background: linear-gradient(to bottom, $color-gr-1 0, $color-gr-2 100%)
+		padding: 8px
+		box-sizing: border-box
+		word-wrap: break-word
+	&__text
+		background-color: #ffffff
+		text-align: center
+		padding: 10px
+		line-height: 1.5
+		border: 1px solid $color-5
+		box-sizing: border-box
+	&__icon
+		margin-right: 8px
+		background-image: url(/../img/spritesheet.png)
+		background-repeat: no-repeat
+		display: inline-block
+		width: 30px
+		height: 30px
+		flex-shrink: 0
+		&_star
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAbFBMVEVHcExeg7leg7leg7leg7leg7leg7leg7leg7leg7leg7leg7leg7n///9eg7ny9fl8msZihrvt8feEocrj6vPE0uV2lcNzk8KNp837/P3c5PCjuNe5yOBtjr9rjb+Sq8/U3uyovNlnir2nu9hi2BP7AAAADXRSTlMAiKrZ+5Bg8Vi4yKvaMeIzmQAAARlJREFUKM+FU1eywyAMxCUGJ6FjXNPvf8cHPIpSZrwf9qBFqK0QSiBV3+C2xU1fEfSJrsYsA9fdO3sAZLhwACTp2Rf6HIEc2Q8cEw98rQX+MW6xyG2T5RTidyArqxRwxz7/GsR7UfoCx9rlBZyfnFL+BO4EVeD2Sh1WYKhA2hfNPc31BSTf+J94DGamGbMZHsLbGxRCC0U/oAKNURteGc07a8ZgbiPNxALZRbBIp7oE8DciVfafmofO8ZVOtqYUZgttS2G5LRNPNJ9KW3JT11z4vJam5pFsnhkG/93KSPJAHXHXUuq7uwQGGuVwXdQUpCAntVyLHKKYxlvWibyNQEx7UtwR8t4a+PxPcIlO3deWuRU8+xU8wxX8Az1ZKKkQdIivAAAAAElFTkSuQmCC)
+		&_menu
+			background-position: -3px -93px
+		&_pinion
+			background-position: -226px -93px
+		&_camera
+			background-position: -221px -21px
+
+.sidebar_main
+	.sidebar
+		&__item
+			&_1,
+			&_2
+				display: flex
+				justify-content: center
+				padding: 25px 0
+				border: 1px dotted $color-7
+
+@media #{$tablet}
+	.sidebar
+		&__title
+			margin-bottom: 5px
+			cursor: pointer
+		&__box
+			display: none
+			opacity: 0
+		&__box.active
+			display: block
+		&__box.visible
+			opacity: 1
+			transition: .5s

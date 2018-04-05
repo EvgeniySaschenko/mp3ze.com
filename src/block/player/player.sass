@@ -1,0 +1,140 @@
+.player
+	width: 100%
+	position: fixed
+	z-index: 100
+	bottom: 0
+	left: 0
+	background-color: $color-1
+	color: #fff
+	user-select: none
+	&__row
+		display: flex
+		align-items: center
+	&__box-btn
+		display: flex
+		align-items: center
+		flex-shrink: 0
+	&__text-volume
+		font-size: 0
+	&__progress-box
+		overflow: hidden
+		white-space: nowrap
+		flex-grow: 1
+		position: relative
+		box-sizing: border-box
+		margin: 0 20px
+		padding: 0 5px
+		height: 30px
+		background-color: $color-2
+		cursor: pointer
+	&__progress
+		position: absolute
+		z-index: 100
+		&_2
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			background-color: rgba(0, 0, 0, .2)
+	&__time
+		display: flex
+		justify-content: space-between
+		transform: translateY(50%)
+	&__info
+		overflow: hidden
+		text-align: center
+		transform: translateY(-50%)
+		margin: 0 35px
+	&__info_box
+		display: block !important
+	&__btn
+		display: inline-block
+		flex-shrink: 0
+		height: 50px
+		width: 50px
+		border-right: 1px solid $color-2
+		cursor: pointer
+		position: relative
+		&:hover
+			background: rgba($color-2, .5)
+		&::before
+			height: 100%
+			width: 100%
+			display: inline-block
+			content: ""
+			background-size: 50%
+			background-repeat: no-repeat
+			background-position: 50% 50%
+		&_prev::before
+			background-image: url(/../img/prev.svg)
+		&_next::before
+			background-image: url(/../img/next.svg)
+		&_toggle::before
+			background-image: url(/../img/play.svg)
+			background-size: 70%
+		&_volume
+			position: relative
+			border-left: 1px solid $color-2
+		&_volume-box
+			display: flex
+			border: 0
+			height: 50px
+			width: 24px
+			position: absolute
+			top: 12px
+			left: 12px
+		&_volume-box::before
+			display: inline-block
+			content: ""
+			height: 100%
+			width: 100%
+			background-image: url(/../img/volume.svg)
+			background-repeat: no-repeat
+			position: absolute
+			filter: invert(.7)
+			background-size: auto
+			background-position: auto
+
+		&_volume-regulator
+			height: 100%
+			overflow: hidden
+			display: inline-block
+			background-image: url(/../img/volume.svg)
+			background-repeat: no-repeat
+			position: absolute
+		&_option
+			display: flex
+			align-items: center
+			border-right: 0
+			&::before
+				height: 100%
+				width: 100%
+				display: inline-block
+				content: ""
+				background-image: url(/../img/player.png)
+				background-size: auto
+			&.js__line::before
+				background-position: 2px 4px
+			&.js__shuffle::before
+				background-position: -40px 4px
+			&.js__repeat::before
+				background-position: 2px -38px
+	.js__on
+		.player__btn_toggle::before
+			background-image: url(/../img/pause.svg)
+
+@media #{$phone}
+	.player
+		&__progress-box
+			margin: 0 2px
+		&__info
+			display: none
+		&__box-btn
+			display: flex
+			align-items: center
+			flex-shrink: 0
+		&__time
+			justify-content: center
+			&_total
+				display: none

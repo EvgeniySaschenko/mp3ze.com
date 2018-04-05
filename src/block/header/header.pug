@@ -1,0 +1,22 @@
+mixin b-header()
+	+b.HEADER.header
+		.container
+			+b.logo
+				+e.IMG.img(src="img/logo.png")
+
+			+b.NAV.nav(class="_header")
+				+e.INPUT.input-checkbox(class="_btn-burger" type="checkbox" id="btn-burger_header")
+				+e.LABEL.label(class="_btn-burger fa fa-bars" for="btn-burger_header")
+					+e.SPAN.label-item
+					+e.SPAN.label-item
+					+e.SPAN.label-item
+
+				+e.UL.list#nav-list_header
+					+e.LI.item
+						+e.A.link(href="#") Item 1
+					+e.LI.item
+						+e.A.link(href="#") Item 2
+					+e.LI.item
+						+e.A.link(href="#") Item 3
+					+e.LI.item
+						+e.A.link(href="#") Item 4

@@ -1,0 +1,28 @@
+.main
+	display: flex
+	&__col
+		&_1,
+		&_3
+			width: 25%
+		&_2
+			width: 50%
+			padding: 0 15px
+			box-sizing: border-box
+		&_dmca
+			line-height: 1.5
+			h1
+				font-size: 25px
+				margin: 20px 0
+				text-align: center
+			ul
+				padding: 10px
+			li
+				margin-left: 15px
+
+@media #{$tablet}
+	.main
+		flex-direction: column
+		&__col
+			width: 100%
+			&_2
+				padding: 0

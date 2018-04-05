@@ -1,0 +1,61 @@
+.btn
+	display: flex
+	width: 100%
+	justify-content: center
+	align-items: center
+	font-size: 16px
+	font-weight: bold
+	background: linear-gradient(to bottom,#77a6ed 0,#507dc0 100%)
+	border: 1px solid transparent
+	border-radius: 4px
+	text-align: center
+	position: relative
+	padding: 2px
+	box-sizing: border-box
+	a,
+	&__link
+		line-height: 50px
+		display: inline-block
+		width: 100%
+		&:visited,
+		&:link
+			color: #fff
+		&:hover,
+		&:active
+			text-decoration: none
+			color: #000
+		&_toggle
+			height: 46px
+		&_toggle::before // Сделано через before изза существующего JS
+			position: absolute
+			top: 4px
+			left: 4px
+			background-image: url(/../img/spritesheet.png)
+			background-repeat: no-repeat
+			display: inline-block
+			width: 46px
+			height: 46px
+			margin-right: 5px
+			content: ""
+		&_pause::before // Сделано через before изза существующего JS
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpFRjQ5MUY3RjQ2QTRFNjExQkY1QUIwRjFDRUVBMDhENSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMjlEMUVDNkFCNTExMUU2ODI2QUJBRjVBQ0EzRUY0OSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMjlEMUVDNUFCNTExMUU2ODI2QUJBRjVBQ0EzRUY0OSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjM3NTlDOTYwMDZBNkU2MTE5RjdCQkE4NURCMUYyQTUwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkVGNDkxRjdGNDZBNEU2MTFCRjVBQjBGMUNFRUEwOEQ1Ii8+IDwvcmRmOkRlc2NyaXB0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")
+		&_play::before // Сделано через before изза существующего JS
+			background-position: -264px -3px
+
+	&__icon
+		position: absolute
+		top: 4px
+		left: 4px
+		background-image: url(/../img/spritesheet.png)
+		background-repeat: no-repeat
+		display: inline-block
+		width: 46px
+		height: 46px
+		margin-right: 5px
+		&_download
+			background-position: -120px -235px
+.btn
+	&_load-more,
+	&_feedback
+		color: #fff
+		height: 50px

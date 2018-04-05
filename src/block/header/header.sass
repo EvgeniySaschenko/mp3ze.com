@@ -1,0 +1,25 @@
+.header
+	background: $color-1
+	margin-bottom: 20px
+	&__row
+		display: flex
+		height: 95px
+		padding: 15px 0
+		box-sizing: border-box
+	&__col
+		display: flex
+		align-items: center
+		&_1,
+		&_3
+			width: 25%
+		&_2
+			width: 50%
+
+@media #{$phone}
+	.header
+		&__row
+			flex-wrap: wrap
+			height: auto
+		&__col
+			width: 100%
+			justify-content: center
