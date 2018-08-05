@@ -26,14 +26,14 @@ const rename = require('gulp-rename');
 
 const isProduction= process.env.NODE_ENV ? true : false;
 
-gulp.task('serve', ['pug', 'ftp-css', 'ftp-js', 'sass', 'js', 'copy', 'sprite-svg'], () => {
+gulp.task('serve', ['pug', 'sass', 'js', 'copy', 'sprite-svg'], () => {
 	browserSync.init({
 			server: {
 				baseDir: "./build"
 			}
 	});
-	gulp.watch('build/css/style.css', ['ftp-css']);
-	gulp.watch('build/js/app.js', ['ftp-js']);
+	// gulp.watch('build/css/style.css', ['ftp-css']);
+	// gulp.watch('build/js/app.js', ['ftp-js']);
 	gulp.watch('src/', ['copy']);
 	gulp.watch('src/assets/icons', ['sprite-svg']);
 	gulp.watch('src/**/*.sass', ['sass']);
